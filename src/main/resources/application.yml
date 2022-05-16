@@ -1,0 +1,14 @@
+server:
+  port: ${SEVER_PORT:8090}
+
+spring:
+  profiles:
+    active: ${PROFILE:local}
+  datasource:
+    url: ${JDBC_DATASOURCE_URL:jdbc:mysql://localhost:3306/yoti?createDatabaseIfNotExist=true}
+    username: ${JDBC_DATASOURCE_USERNAME:root}
+    password: ${JDBC_DATASOURCE_PASSWORD:password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false #fixes the warning message... spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
