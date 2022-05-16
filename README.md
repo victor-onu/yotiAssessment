@@ -35,6 +35,8 @@ For building and running the application you need:
 
    + change `spring.datasource.username` and `spring.datasource.password` properties as per your mysql installation
 
+
+
 4. **Run the app**
 
    There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.example.yotiassessment.YotiAssessmentApplication` class from your IDE.
@@ -62,10 +64,10 @@ For building and running the application you need:
         "roomSize" : [5, 5],
          "coords" : [1, 2],
          "patches" : [
-         [1, 0],
-         [2, 2],
-         [2, 3]
-         ],
+                        [1, 0],
+                        [2, 2],
+                        [2, 3]
+                     ],
          "instructions" : "NNESEESWNWW"
     }
 # Clean Patches Success Response Sample	
@@ -77,12 +79,11 @@ For building and running the application you need:
          "debugMessage": null,
          "subErrors": null,
          "data": {
-         "coords": [
-         1,
-         3
-         ],
-         "patches": 1
-         }
+                  "coords": [
+                              1,3
+                            ],
+                  "patches": 1
+                 }
 
     }
 
