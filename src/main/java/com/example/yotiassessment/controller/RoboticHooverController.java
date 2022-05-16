@@ -25,7 +25,7 @@ public class RoboticHooverController {
         this.roboticHooverService = roboticHooverService;
     }
 
-    @PostMapping("/calculate")
+    @PostMapping("/clean-patches")
     public ResponseEntity<ApiResponse<RoboticHooverOutPutDTO>> findHooverPositionAndDirtCleaned(@Valid @RequestBody RoboticHooverInputDTO roboticHooverInputDTO){
         RoboticHooverOutPutDTO roboticHooverOutPut = roboticHooverService.findHooverPositionAndDirtCleaned(roboticHooverInputDTO);
         ApiResponse<RoboticHooverOutPutDTO> response = new ApiResponse<>(HttpStatus.OK);
